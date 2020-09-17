@@ -94,11 +94,47 @@ console.log(personTwo.stomach);
     - A car which runs out of `fuel` while driving can't drive any more distance:
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
-
+//--------------------------------------------<<< NOT DONE, 
 class Car {
+  constructor(model, milesPerGallon) {
+  this.model= model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0
+  }
+  drive(distance){
+    this.odometer+=distance; this.tank-distance;
+    if( this.tank = 0){
+    return `I ran out of fuel at ${this.odometer} miles!`
+  }
+    else { return this.odometer+ distance
+
+    }
+  }
+  fill(gallons){
+    return this.tank += gallons
+
+   }
 
 }
+const carOne = new Car('Mustang', 24);
+const carTwo = new Car('Camaro', 33);
+const carThree = new Car('Corvette', 41);
 
+console.log(carOne.toString());
+console.log(carTwo.toString());
+console.log(carThree.toString());
+
+carTwo.fill(5);
+carTwo.fill(5);
+carTwo.fill(0);
+
+console.log(carTwo.tank);
+
+carTwo.drive(5);
+carTwo.drive(5);
+carTwo.drive(0);
+console.log(carTwo.tank);
 /*
   TASK 3
     - Write a Lambdasian class.
@@ -112,6 +148,8 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
+  constructor(attributes)
+  
 
 }
 
